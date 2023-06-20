@@ -1,4 +1,4 @@
-$form-max-width: 480px;
+
 
 * {
   margin: 0;
@@ -15,20 +15,24 @@ form {
   box-shadow: rgb(130, 24, 44) 0px 50px 100px -20px, rgba(0, 0, 0, 0.8) 0px 30px 60px -30px, rgba(64, 10, 15, 0.82) 0px -2px 6px 0px inset;
   background-color: green;
   color: #fff;
-  max-width: $form-max-width;
+  max-width: 450px;
   height: auto;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 2.5%;
   font-size: 16px;
 
   .table {
     thead tr th {
+
       text-align: center;
     }
-
+    tbody tr th{
+      text-align: center;
+    }
     input {
+      width: 150px;
       color: #000;
       text-align: center;
     }
@@ -38,8 +42,15 @@ form {
       width: 150px;
     }
   }
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+  }
 
-  @media (max-width: 480px) {
-    max-width: 50%;
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    
   }
 }
